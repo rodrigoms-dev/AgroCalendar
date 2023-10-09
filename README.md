@@ -14,7 +14,7 @@ O AgroCalendar é uma aplicação simples para ajudar no gerenciamento de tarefa
 
 1. Baixe e instale o Python (se já não estiver instalado).
 2. Clone ou faça o download deste repositório.
-3. Execute o programa com `python AgroCalendar.py` no terminal.
+3. Execute o programa com `python main.py` no terminal.
 4. Use a interface gráfica para gerenciar suas tarefas.
 
 ## Requisitos
