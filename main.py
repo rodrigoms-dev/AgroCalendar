@@ -79,7 +79,7 @@ cor4 = '#ffffff'
 cor5 = '#32281d'
 
 # Fontes *******************
-font1 = 'Stardew Valley Regular'
+font1 = 'Arial'
 
 # Configurações da Janela/Interface gráfica
 janela = Tk()
@@ -103,12 +103,12 @@ cursor.execute('''
 conn.commit()
 
 #Título do programa
-label_inicio = Label(janela, background=cor1, text='AgroCalendar', fg=cor5, font=(font1, 35))
-label_inicio.grid(row=0, column=0)
+label_inicio = Label(janela, background=cor1, text='AgroCalendar', fg=cor5, font=(font1, 27))
+label_inicio.place(x=6,y=7)
 
 # Cria um campo para digitar uma tarefa
-entry_add = Entry(janela, background=cor1, borderwidth=6, fg=cor5, width=20, font=(font1, 20))
-entry_add.place(x=2, y=65)
+entry_add = Entry(janela, background=cor1, borderwidth=6, fg=cor5, width=22, font=(font1, 15))
+entry_add.place(x=6, y=65)
 entry_add.bind('<Return>', lambda event=None: adicionar_tarefa())
 entry_add.bind('<Return>', mover_foco)
 entry_add.insert(0, 'Digite sua Tarefa')
@@ -116,16 +116,16 @@ entry_add.bind('<FocusIn>', on_enter)
 entry_add.bind('<FocusOut>', on_leave)
 
 # Cria um campo para digitar a data para realizar a tarefa
-entry_data = Entry(janela, background=cor1, borderwidth=6, fg=cor5, width=10, font=(font1, 20))
-entry_data.place(x=290, y=65)
+entry_data = Entry(janela, background=cor1, borderwidth=6, fg=cor5, width=12, font=(font1, 15))
+entry_data.place(x=286, y=65)
 entry_data.bind('<Return>', lambda event=None: botao_adicionar.invoke())
 entry_data.insert(0, 'DD/MM/YYYY')
 entry_data.bind('<FocusIn>', on_enter_data)
 entry_data.bind('<FocusOut>', on_leave_data)
 
 # Cria a lista de tarefas na tela
-lista_tarefas = Listbox(janela, width=47, height=20, background=cor1, highlightthickness=0, borderwidth=6, font=(font1, 15))
-lista_tarefas.place(x=2, y=120)
+lista_tarefas = Listbox(janela, width=46, height=20, background=cor1, highlightthickness=0, borderwidth=6, font=(font1, 13))
+lista_tarefas.place(x=6, y=120)
 atualizar_lista_tarefas()
 
 # Barra de rolagem vertical
@@ -136,11 +136,11 @@ scrollbar.place(x=440-15, y=120, height=25)
 lista_tarefas.config(yscrollcommand=scrollbar.set)
 
 # Botões
-botao_adicionar = Button(janela, background=cor2, activebackground=cor2,fg=cor4, text="Adicionar Tarefa", width=15, font=(font1, 15), borderwidth=6, overrelief='ridge', command=adicionar_tarefa)
-botao_adicionar.place(x=295, y=10)
+botao_adicionar = Button(janela, background=cor2, activebackground=cor2,fg=cor4, text="Adicionar Tarefa", width=14, font=(font1, 13), borderwidth=6, overrelief='ridge', command=adicionar_tarefa)
+botao_adicionar.place(x=288, y=14)
 
-botao_excluir = Button(janela, background=cor3, activebackground=cor3,fg=cor4, text="Excluir Tarefa", width=15, font=(font1, 15), borderwidth=6, overrelief='ridge', command=excluir_tarefa)
-botao_excluir.place(x=2, y=550)
+botao_excluir = Button(janela, background=cor3, activebackground=cor3,fg=cor4, text="Excluir Tarefa", width=14, font=(font1, 13), borderwidth=6, overrelief='ridge', command=excluir_tarefa)
+botao_excluir.place(x=6, y=550)
 
 # Configuração de layout
 for i in range(1, 20):
