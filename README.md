@@ -29,3 +29,8 @@ Este projeto é parte de uma atividade extensionista da faculdade de análise e 
 ## Autor
 
 Rodrigo Martins da Silva
+
+## Imagem do Programa:
+
+![image](https://github.com/user-attachments/assets/5b69a7f6-a00a-496d-a09b-6010c225c90a)
+
